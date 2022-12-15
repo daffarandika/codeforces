@@ -1,4 +1,5 @@
-#include <bits/stdc++.h>
+#include <iostream>
+#include <vector>
 using namespace std;
 
 bool toggle(int n, bool b){
@@ -8,46 +9,46 @@ bool toggle(int n, bool b){
     return !b;
 }
 
-void switchLights(vector<vector<int>>& vInput){
-    int i,j,n;
-    for (i = 0; i < 3; i++) {
-        for (j = 0; j < 3; j++) {
-            cin >> n;
-            switch (j) {
-                case 0:
-                    vInput[i][j] = toggle(n, vInput[i][j]); 
-                    vInput[i][j+1] = toggle(n, vInput[i][j+1]); 
-                    break;
-                case 1:
-                    vInput[i][j-1] = toggle(n, vInput[i][j-1]); 
-                    vInput[i][j] = toggle(n, vInput[i][j]); 
-                    vInput[i][j+1] = toggle(n, vInput[i][j+1]); 
-                    break;
-                default:
-                    vInput[i][j-1] = toggle(n, vInput[i][j-1]); 
-                    vInput[i][j] = toggle(n, vInput[i][j]); 
-                    break;
-            }
-        }
-        switch (i) {
-            case 0:
-                vInput[i][j] = toggle(n, vInput[i][j]); 
-                vInput[i+1][j] = toggle(n, vInput[i+1][j]); 
-                break;
-            case 1:
-                vInput[i-1][j] = toggle(n, vInput[i-1][j]); 
-                vInput[i][j] = toggle(n, vInput[i][j]); 
-                vInput[i+1][j] = toggle(n, vInput[i+1][j]); 
-                break;
-            default:
-                vInput[i-1][j] = toggle(n, vInput[i-1][j]); 
-                vInput[i][j] = toggle(n, vInput[i][j]); 
-                break;
-    }
+void switchLights(vector<vector<int>>& vInput, int row, int col, int n){
+    /* TODO 
+     * if x minus == negative value
+     * if x plus == outofbound value
+     */
+    vInput[row - 1][col] = toggle(n, vInput[row - 1][col]); // up
+    vInput[row][col - 1] = toggle(n, vInput[row][col - 1]); // left
+    vInput[row][col] = toggle(n, vInput[row][col]); //center
+    vInput[row][col + 1] = toggle(n, vInput[row][col + 1]); // right
+    vInput[row + 1][col] = toggle(n, vInput[row + 1][col]); // down
 }
 
 int main() {
-    vector<vector<int>> lights = { {1,1,1}, {1,1,1}, {1,1,1} };
-    switchLights(lights);
+    vector<vector<int>> lights = { 
+        {0,0,0,0,0},
+        {0,1,1,1,0},
+        {0,1,1,1,0},
+        {0,1,1,1,0},
+        {0,0,0,0,0}
+    };
+    // input
+    for (int i = 1; i <= 3; i++){
+        for (int j = 1; j <=3; j++){
+            int n;
+            cin >> n;
+            switchLights(lights, i, j, n);
+        }
+    }
+    // output
+    for (int i = 1; i <= 3; i++){
+        for (int j = 1; j <=3; j++){
+            cout << lights[i][j];
+        }
+        cout << '\n';
+    }
+//    for (vector<int> v : lights){
+//        for (int i : v) {
+//            cout << i;
+//        }
+//        cout << '\n';
+//    }
     return 0;
 }
