@@ -2,52 +2,23 @@
 #include <vector>
 using namespace std;
 
-int findMax (vector<int> v) {
-    int maxIndex = 0;
-    for (int i = 0; i < v.size(); i++){
-        if (v[i] > v[ maxIndex ]) {
-            maxIndex = i;
-        }
-    }
-    return maxIndex;
-}
-
-int findMin (vector<int> v) {
-    int minIndex = 0;
-    for (int i = 0; i < v.size(); i++){
-        if (v[i] <= v[ minIndex ]) {
-            minIndex = i;
-        }
-    }
-    return minIndex;
-}
-
-int rearrange(vector<int>& v){
-    // diff between maxIndex and 0
-    // diff between minIndex and size - 1
-    
-    int count(0), max( findMax(v) ), min( findMin(v) );
-
-    count += max;
-    count += ( (v.size() - 1) - min );
-
-    if (max > min){
-        count--;
-    }
-    return count;
-}
-
 int main() {
-    int n, soldier;
-    vector<int> soldiers;
-    cin >> n;
-
-    while (n--) {
-        cin >> soldier;
-        soldiers.push_back(soldier);
+    int s, n, shortest(101), tallest(1), shortestIndex(0), tallestIndex(0);
+    cin >> s;
+    for (int i = 0; i < s;i++) {
+        cin >> n;
+        if (n <= shortest) {
+            shortest = n;
+            shortestIndex = i;
+        }
+        if (n > tallest) {
+            tallest = n;
+            tallestIndex = i;
+        }
     }
-
-    cout << rearrange(soldiers);
-
+    if (tallestIndex > shortestIndex) {
+        tallestIndex--;
+    }
+    cout << (tallestIndex) + (s - shortestIndex - 1);
     return 0;
 }
