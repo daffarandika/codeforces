@@ -1,5 +1,6 @@
 #include <iostream>
 using namespace std;
+// http://codeforces.com/problemset/problem/155/A
 
 int main () {
     // start 14.27

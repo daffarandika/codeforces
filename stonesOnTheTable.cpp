@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 using namespace std;
+// http://codeforces.com/problemset/problem/266/A
 
 int main(){
     int n, adj(0);

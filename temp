@@ -1,6 +1,0 @@
-    vector<pair<int, string>> x = { { 1, "apple" }, { 2, "banana" }, { 3, "cherry" }, { 4, "Guava" } };
-    vector<pair<int, string>>::iterator it = x.begin() + 1;
-    x.erase(it);
-    for (pair<int, string> p : x) {
-        cout << p.first << " " << p.second << "\n";
-    }

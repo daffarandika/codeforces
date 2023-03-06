@@ -1,5 +1,7 @@
 #include <iostream>
 using namespace std;
+// http://codeforces.com/problemset/problem/233/A
+
 int main (int argc, char *argv[])
 {
     int n;

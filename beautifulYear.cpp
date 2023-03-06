@@ -1,5 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
+// http://codeforces.com/problemset/problem/271/A
 
 bool hasDuplicate(int digits){
     string s = to_string(digits);

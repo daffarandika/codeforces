@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 using namespace std;
+// http://codeforces.com/problemset/problem/275/A
 
 bool toggle(int n, bool b){
     if (n%2 == 0){

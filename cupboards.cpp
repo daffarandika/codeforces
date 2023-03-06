@@ -1,5 +1,6 @@
 #include <iostream>
 using namespace std;
+// http://codeforces.com/problemset/problem/248/A
 
 int countCupboard(int sum, int size) {
     int closed = size - sum;

@@ -1,6 +1,7 @@
 #include <iostream>
 #include <iomanip>
 using namespace std;
+// http://codeforces.com/problemset/problem/200/B
 
 int main (){
     int n;

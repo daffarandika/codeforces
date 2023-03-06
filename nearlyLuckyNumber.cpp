@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 using namespace std;
+// http://codeforces.com/problemset/problem/110/A
 
 bool isLuckyElement(char c){ //check wheter it is a 4 or a 7
     if (c != '4' && c != '7') {

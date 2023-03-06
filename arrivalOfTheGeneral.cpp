@@ -1,5 +1,6 @@
 #include <iostream>
 using namespace std;
+// http://codeforces.com/problemset/problem/144/A
 
 int main() {
     int s, n, shortest(101), tallest(1), shortestIndex(0), tallestIndex(0);

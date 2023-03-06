@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 using namespace std;
+// http://codeforces.com/problemset/problem/32/B
 
 int main(){
     string borze;

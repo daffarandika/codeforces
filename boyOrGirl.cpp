@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include <set>
+// http://codeforces.com/problemset/problem/236/A
 
 using namespace std;
 

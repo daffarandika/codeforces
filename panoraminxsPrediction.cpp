@@ -1,5 +1,6 @@
 #include <iostream>
 #include <math.h>
+// http://codeforces.com/problemset/problem/80/A
 
 using namespace std;
 

@@ -1,5 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
+// http://codeforces.com/problemset/problem/59/A
 
 int main() {
     string input;

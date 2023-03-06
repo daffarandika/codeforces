@@ -1,6 +1,6 @@
 #include <iostream>
-
 using namespace std;
+// http://codeforces.com/problemset/problem/69/A
 
 bool solve(int n){
     int x, y, z, xsum(0), ysum(0), zsum(0);

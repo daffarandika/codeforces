@@ -1,6 +1,7 @@
 #include <iostream>
 #include <set>
 using namespace std;
+// http://codeforces.com/problemset/problem/228/A
 
 int main() {
     int n = 4;

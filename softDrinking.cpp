@@ -1,6 +1,7 @@
 #include <iostream>
 #include <math.h>
 using namespace std;
+// http://codeforces.com/problemset/problem/151/A
 
 int main ()
 {
