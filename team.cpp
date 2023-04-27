@@ -1,5 +1,6 @@
 #include <iostream>
 using namespace std;
+// https://codeforces.com/problemset/problem/231/A
 int main ()
 {
   int t, temp, sure = 0, implemented = 0;
