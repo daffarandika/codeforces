@@ -1,2 +1,2 @@
 # codeforces
-All of my codeforces submitions
+All of my codeforces submissions
